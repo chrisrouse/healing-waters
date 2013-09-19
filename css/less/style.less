@@ -1,0 +1,142 @@
+/*
+Theme Name: Healing Waters
+Theme URI: https://github.com/chrisrouse
+Version: 1.0
+Description: Child Theme for Healing Waters Roanoke.
+Author: Chris Rouse
+Author URI: http://chrisrouse.us
+Author Email: chris@chrisrouse.us
+License: GNU General Public License v3.0 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: standard
+*/
+
+
+/* Import Standard Styles
+---------------------------------------------------------------------------------- */
+
+@import url( '../standard/style.css' );
+@import url( '../standard/css/theme-responsive.css' );
+
+/* Uncomment the line below to enable child theme right-to-left language support. */
+/* @import url( '../standard/rtl.css' ); */
+
+
+// Bootstrap core variables and mixins
+// @import "variables.less";
+// @import "mixins.less";
+
+@import "bootstrap.less";
+
+/* Customizations
+---------------------------------------------------------------------------------- */
+
+// Responsive Slider
+// -------------------------
+.responsive-slider.flexslider .slide-title a {
+    top: 10px;
+    right: 10px;
+    font-family: @baseFontFamily;
+    font-size: @baseFontSize;
+}
+
+.responsive-slider.flexslider .flex-control-nav {
+    display: none;
+}
+
+// contact form 7
+// -------------------------
+.wpcf7-form textarea {
+    width: 95%;
+}
+
+// Header Box
+// -------------------------
+    #logo {
+    text-align: center;
+    float: none;
+        }
+
+
+// Front
+// -------------------------
+.home .breadcrumb {
+    visibility: hidden;
+}
+
+// misc classes/elements
+// -------------------------
+.content {
+    img {
+        .img-polaroid();
+        padding: 8px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    h6 {
+        font-size: (@baseFontSize + 5px);
+        font-style: italic;
+        color: @textColor;
+        font-weight: normal;
+        padding: 15px;
+        background: @grayLighter;
+        margin: -5px 0 15px 0 ;
+        text-align: center;
+    }
+}
+
+.post, #comments, #pings, #no-comments, #respond {
+    border: none;
+    box-shadow: none;
+}
+
+
+.post-header {
+    margin: 0 20px 15px 20px;
+}
+
+// modal
+// -------------------------
+.modal{
+    color: @textColor;
+    text-align: left;
+    &-body {
+        max-height: none;
+    }
+    &-header {
+        background: @grayLighter;
+    h3 {
+        color: @textColor;
+    }
+    }
+}
+
+
+/* Media Queries
+---------------------------------------------------------------------------------- */
+
+/* Smartphones */
+@media (max-width: 480px) {
+
+}
+
+/* Tablet & Mobile */
+@media (max-width: 979px) {
+
+}
+/* Mobile to Tablet */
+@media only screen and (max-width: 767px) {
+
+}
+
+
+/* Landscape Tablets */
+@media (min-width: 768px) and (max-width: 768px) {
+
+}
+
+/* Desktop */
+@media (min-width: 980px) {
+
+}
+
