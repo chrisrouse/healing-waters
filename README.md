@@ -1,4 +1,4 @@
-# Standard Child Theme Kit
+# Healing Waters Info
 
 ## Description
 
