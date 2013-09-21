@@ -62,6 +62,63 @@ Template: standard
 	margin: @baseLineHeight 0;
 }
 
+// navigation
+// -------------------------
+
+// general
+
+.navbar-inverse .navbar-inner {
+	background-color: transparent;
+	background-image: none;
+	.box-shadow(none);
+}
+
+.menu-header-container {
+    width: auto;
+    border-top: 3px solid @blue;
+    border-bottom: 3px solid @blue;
+	padding: 10px 0 9px 0;
+    line-height: @baseLineHeight;
+
+    .nav li {
+        border-right: 2px solid @blue;
+        margin-top: 0px;
+    }
+
+    .nav a:link, .nav a:visited {
+        padding: 0 12px;
+    }
+
+    .nav li:first-child a {
+        padding-left: 0;
+    }
+
+    .nav li:last-child {
+        border-right: 0;
+    }
+
+    .nav li:last-child a {
+        padding-right: 0;
+    }
+}
+
+// menu below header
+#menu-under-header.navbar {
+	.navbar-inner {
+    	text-align: center;
+    }
+
+	.navbar-inner .nav {
+	    float: none;
+	    display:inline-block;
+        }
+
+	.nav>li>a {
+		padding: 0px 10px 0px;
+	}
+}
+
+
 // Front
 // -------------------------
 .home .breadcrumb {

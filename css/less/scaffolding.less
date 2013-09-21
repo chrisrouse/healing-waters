@@ -29,7 +29,7 @@ a:focus {
   text-decoration: underline;
 }
 
-// Navigation 
+// Navigation
 // -------------------------
 
 .navbar .nav {
@@ -39,13 +39,14 @@ a:focus {
 	.current-menu-item > a,
 	.current-menu-item > a:hover {
 		color: @navColorHover;
-		.box-shadow(none); 
+		.box-shadow(none);
 	}
 	>li>a {
-	    font-size: (@baseFontSize + 4px);
+	    font-size: (@baseFontSize * 1.5);
 	    color: @navColor;
-	    background-color: transparent; 
-	    
+	    background-color: transparent;
+	    text-transform: lowercase;
+
 	    &:hover {
 		    color: @navColorHover;
 	    }
