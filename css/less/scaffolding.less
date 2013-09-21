@@ -29,6 +29,29 @@ a:focus {
   text-decoration: underline;
 }
 
+// Navigation 
+// -------------------------
+
+.navbar .nav {
+	>.active>a,
+	>.active>a:hover,
+	>.active>a:focus,
+	.current-menu-item > a,
+	.current-menu-item > a:hover {
+		color: @navColorHover;
+		.box-shadow(none); 
+	}
+	>li>a {
+	    font-size: (@baseFontSize + 4px);
+	    color: @navColor;
+	    background-color: transparent; 
+	    
+	    &:hover {
+		    color: @navColorHover;
+	    }
+	}
+}
+
 
 // Images
 // -------------------------

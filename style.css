@@ -70,6 +70,24 @@ a:focus {
   color: #005580;
   text-decoration: underline;
 }
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus,
+.navbar .nav .current-menu-item > a,
+.navbar .nav .current-menu-item > a:hover {
+  color: #183178;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.navbar .nav > li > a {
+  font-size: 18px;
+  color: #0f75c2;
+  background-color: transparent;
+}
+.navbar .nav > li > a:hover {
+  color: #183178;
+}
 .img-rounded {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -351,9 +369,67 @@ address {
   font-style: normal;
   line-height: 20px;
 }
-.menu-header-container {
-  width: 760px;
+.navbar-inverse .navbar-inner {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
+.menu-header-container {
+  width: auto;
+  border-top: 2px solid #0f75c2;
+  border-bottom: 2px solid #0f75c2;
+  padding: 6px 0 5px 0;
+  line-height: 20px;
+}
+.menu-header-container .nav li {
+  border-right: 2px solid #BDBDBD;
+  margin-top: 0px;
+}
+.menu-header-container .nav a:link,
+.nav a:visited {
+  padding: 0 12px;
+}
+.menu-header-container .nav li:first-child a {
+  padding-left: 0;
+}
+.menu-header-container .nav li:last-child {
+  border-right: 0;
+}
+.menu-header-container .nav li:last-child a {
+  padding-right: 0;
+}
+#menu-under-header.navbar .navbar-inner {
+  text-align: center;
+}
+#menu-under-header.navbar .navbar-inner .nav {
+  float: none;
+  display: inline-block;
+}
+#menu-under-header.navbar .nav > li > a {
+  padding: 10px 10px 10px;
+}
+/* active menu items */
+/* hover menu items */
+/*
+#menu-under-header.navbar .nav-menu > li > a:hover {
+background-color: #ABCDEF;
+color: #FF0000;
+}
+*/
+/* text */
+/*
+#menu-under-header.navbar .nav > li > a {
+color: #0000FF;
+}
+*/
+/* text hover */
+/*
+#menu-under-header.navbar .nav > li > a:hover {
+color: #00FF00;
+}
+*/
 .responsive-slider.flexslider .slides img {
   padding: 4px;
   background-color: #fff;
@@ -596,6 +672,11 @@ h4 a:hover {
 #logo {
   text-align: center;
   float: none;
+}
+#header-image h1 a,
+#header-image p a {
+  text-align: center;
+  margin: 20px 0;
 }
 .home .breadcrumb {
   visibility: hidden;

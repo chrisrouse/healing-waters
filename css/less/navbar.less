@@ -1,14 +1,78 @@
 // navigation
 
 // general
-.menu-header-container {
-    width: 760px;
+
+.navbar-inverse .navbar-inner {
+	background-color: transparent;
+	background-image: none;
+	.box-shadow(none);
 }
+
+.menu-header-container {
+    width: auto;
+    border-top: 2px solid @blue;
+    border-bottom: 2px solid @blue;
+	padding: 6px 0 5px 0;
+    line-height: @baseLineHeight;
+}
+
+	.menu-header-container .nav li { border-right: 2px solid #BDBDBD; margin-top: 0px; }
+.menu-header-container .nav a:link, .nav a:visited { padding: 0 12px; }
+.menu-header-container .nav li:first-child a { padding-left: 0; }
+.menu-header-container .nav li:last-child { border-right: 0; }
+.menu-header-container .nav li:last-child a { padding-right: 0; }
+
+
+
+
 
 // menu above header
 
-
+	
 // menu below header
+#menu-under-header.navbar {
+	.navbar-inner {
+    	text-align: center;
+    }
+	
+	.navbar-inner .nav {
+	    float: none;
+	    display:inline-block;
+}
+
+	.nav>li>a {
+		padding: 10px 10px 10px;
+
+	}
+	}
+	
+
+	
+	
+/* active menu items */
+
+
+/* hover menu items */
+/*
+#menu-under-header.navbar .nav-menu > li > a:hover {
+background-color: #ABCDEF;
+color: #FF0000;
+}
+*/
+
+/* text */
+/*
+#menu-under-header.navbar .nav > li > a {
+color: #0000FF;
+}
+*/
+
+/* text hover */
+/*
+#menu-under-header.navbar .nav > li > a:hover {
+color: #00FF00;
+}
+*/
 
 
 // breadcrumbs
