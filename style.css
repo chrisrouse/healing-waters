@@ -651,6 +651,7 @@ h4 a:hover {
 }
 #menu-under-header.navbar .navbar-inner {
   text-align: center;
+  margin: 20px 0;
 }
 #menu-under-header.navbar .navbar-inner .nav {
   float: none;
@@ -661,6 +662,16 @@ h4 a:hover {
 }
 .home .breadcrumb {
   visibility: hidden;
+}
+#home-widgets .widget h4.widget-title {
+  font-family: 'Roboto Slab', serif;
+  color: #4ea6d1;
+  font-weight: 300;
+  border-top: 1px solid #4ea6d1;
+  border-bottom: 1px solid #4ea6d1;
+  padding: 10px 0 9px 0;
+  line-height: 20px;
+  text-align: center;
 }
 .content img {
   padding: 4px;
@@ -678,7 +689,7 @@ h4 a:hover {
   font-size: 19px;
   font-style: italic;
   color: #333333;
-  font-weight: normal;
+  font-weight: 400;
   padding: 15px;
   background: #eeeeee;
   margin: -5px 0 15px 0;

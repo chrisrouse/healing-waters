@@ -106,6 +106,7 @@ Template: standard
 #menu-under-header.navbar {
 	.navbar-inner {
     	text-align: center;
+    	margin: @baseLineHeight 0;
     }
 
 	.navbar-inner .nav {
@@ -125,6 +126,22 @@ Template: standard
     visibility: hidden;
 }
 
+
+#home-widgets {
+    .widget h4.widget-title {
+        font-family: @serifFontFamily;
+        color: @blue;
+        font-weight: @fontLight;
+        border-top: 1px solid @blue;
+        border-bottom: 1px solid @blue;
+    	padding: 10px 0 9px 0;
+        line-height: @baseLineHeight;
+        text-align: center;
+    }
+
+}
+
+
 // misc classes/elements
 // -------------------------
 .content {
@@ -138,7 +155,7 @@ Template: standard
         font-size: (@baseFontSize + 5px);
         font-style: italic;
         color: @textColor;
-        font-weight: normal;
+        font-weight: @fontNormal;
         padding: 15px;
         background: @grayLighter;
         margin: -5px 0 15px 0 ;

@@ -83,12 +83,12 @@ add_action( 'wp_enqueue_scripts', 'bootstrap_cdn_styles', 999 );
 /* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CUSTOMIZATIONS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ */
 
 //load google webfont
-	wp_register_style( 'google_font_one', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400' );
-wp_enqueue_style( 'google_font_one' );
+	wp_register_style( 'google_font_sans_serif', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' );
+wp_enqueue_style( 'google_font_sans_serif' );
 
 //load google webfont
-	wp_register_style( 'google_font_two', 'http://fonts.googleapis.com/css?family=Roboto+Slab' );
-wp_enqueue_style( 'google_font_two' );
+	wp_register_style( 'google_font_serif', 'http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700' );
+wp_enqueue_style( 'google_font_serif' );
 
 
 
