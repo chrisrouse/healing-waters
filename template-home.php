@@ -31,6 +31,29 @@
 								<?php the_content(); ?>
 							</div><!-- /.entry-content -->
 						</div> <!-- /#post --->
+
+    						<?php if( is_active_sidebar( 'sidebar-7' ) || is_active_sidebar( 'sidebar-8' ) || is_active_sidebar( 'sidebar-9' ) ) { ?>
+    	<div id="home-widgets" class="clearfix">
+    		<div class="container">
+    			<div class="row">
+
+    				<div id="left-home-widgets" class="span4 clearfix">
+    					<?php dynamic_sidebar( 'sidebar-7' ); ?>
+    				</div><!-- /#left-home-widget -->
+
+    				<div id="center-home-widgets" class="span4 clearfix">
+    					<?php dynamic_sidebar( 'sidebar-8' ); ?>
+    				</div><!-- /#center-home-widget -->
+
+    				<div id="right-home-widgets" class="span4 clearfix">
+    					<?php dynamic_sidebar( 'sidebar-9' ); ?>
+    				</div><!-- /#right-home-widget -->
+
+    			</div><!-- /row -->
+    		</div><!-- /container -->
+    	</div><!-- /#home-widgets -->
+    <?php } // end if ?>
+
 					<?php } // end while ?>
 				<?php } // end if ?>
 			</div><!-- /#main -->

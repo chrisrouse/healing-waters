@@ -92,3 +92,48 @@ wp_enqueue_style( 'google_font_two' );
 
 
 
+/**
+ * Adds custom sidebars
+ */
+function add_admin_sidebars() {
+    //Add Homepage Widget Left
+    register_sidebar(
+     array(
+     'name' => __( 'Homepage Widget Left', 'standard' ),
+     'id' => 'sidebar-7',
+     'description' => 'Left Sidebar on the custom homepage',
+     'before_widget' => '<div id="%1$s" class="widget %2$s">',
+     'after_widget' => '</div>',
+     'before_title' => '<h3 class="widgettitle">',
+     'after_title' => '</h3>'
+     )
+    );
+
+     // Add Homepage Widget Left
+    register_sidebar(
+     array(
+     'name' => __('Homepage Widget Center', 'standard'),
+     'id' => 'sidebar-8',
+     'description' => __( 'Center Sidebar on the custom homepage', 'standard' ),
+     'before_widget' => '<div id="%1$s" class="widget %2$s">',
+     'after_widget' => '</div>',
+     'before_title' => '<h3 class="widget-title">',
+     'after_title' => '</h3>'
+     )
+    );
+
+      // Add Homepage Widget Left
+    register_sidebar(
+     array(
+     'name' => __('Homepage Widget Right', 'standard'),
+     'id' => 'sidebar-9',
+     'description' => __( 'Right Sidebar on the custom homepage', 'standard' ),
+     'before_widget' => '<div id="%1$s" class="widget %2$s">',
+     'after_widget' => '</div>',
+     'before_title' => '<h3 class="widget-title">',
+     'after_title' => '</h3>'
+     )
+    );
+
+} // end add_theme_sidebars
+add_action('init', 'add_admin_sidebars');
