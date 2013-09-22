@@ -211,13 +211,17 @@
 					<div class="navbar-inner">
 						<div class="container">
 
-							<a class="btn btn-navbar" data-toggle="collapse" data-target=".below-header-nav-collapse">
+							<!--
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".below-header-nav-collapse">
 							  <span class="icon-bar"></span>
 							  <span class="icon-bar"></span>
 							  <span class="icon-bar"></span>
 							</a>
+-->
 
-							<div class="nav-collapse below-header-nav-collapse">
+<!-- 							<div class="nav-collapse below-header-nav-collapse"> -->
+                                <div class="below-header-nav-collapse">
+
 								<?php
 									wp_nav_menu(
 										array(

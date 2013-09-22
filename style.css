@@ -618,6 +618,18 @@ h4 a:hover {
   text-align: center;
   margin: 20px 0;
 }
+.nav-collapse.collapse {
+  height: auto;
+  overflow: visible;
+}
+/* collapsed navigation button background */
+#menu-above-header .btn.btn-navbar {
+  display: none;
+}
+/* collapsed navigation button bars */
+#menu-above-header .navbar .btn-navbar .icon-bar {
+  background-color: black;
+}
 .navbar-inverse .navbar-inner {
   background-color: transparent;
   background-image: none;
@@ -660,9 +672,6 @@ h4 a:hover {
 #menu-under-header.navbar .nav > li > a {
   padding: 0px 10px 0px;
 }
-.home .breadcrumb {
-  visibility: hidden;
-}
 #home-widgets .widget h4.widget-title {
   font-family: 'Roboto Slab', serif;
   color: #4ea6d1;
@@ -672,6 +681,26 @@ h4 a:hover {
   padding: 10px 0 9px 0;
   line-height: 20px;
   text-align: center;
+}
+.post-header {
+  margin: 0 0px 35px 0px;
+  padding: 0 ;
+  border-bottom: 4px solid #1c3e7b;
+}
+/*
+.post-title {
+    margin: 0 0 -18px 30px;
+}
+*/
+.entry-content,
+.entry-summary {
+  padding: 0 0px 20px;
+}
+.breadcrumb {
+  background: rgba(78, 166, 209, 0.1);
+}
+.breadcrumb > li {
+  text-shadow: none;
 }
 .content img {
   padding: 4px;
@@ -703,8 +732,40 @@ h4 a:hover {
   border: none;
   box-shadow: none;
 }
-.post-header {
-  margin: 0 20px 15px 20px;
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  border-color: #4ea6d1;
+}
+.wpcf7-form p {
+  color: #4ea6d1;
+}
+input[type="submit"] {
+  border: none;
+  background-color: #4ea6d1;
+  color: #ffffff;
+  background-image: none;
+  font-size: 14px;
+  padding: 10px 60px;
+  line-height: 20px;
+  text-shadow: none;
+}
+input[type="submit"]:hover {
+  background-color: #1c3e7b;
+  color: white;
 }
 .modal {
   color: #333333;
@@ -723,11 +784,24 @@ h4 a:hover {
 ---------------------------------------------------------------------------------- */
 /* Smartphones */
 @media (max-width: 480px) {
-  
+  #menu-under-header.navbar .nav > li > a {
+    font-size: 20px;
+  }
 }
 /* Tablet & Mobile */
 @media (max-width: 979px) {
-  
+  .navbar .nav > li {
+    display: inline-block;
+    float: none;
+  }
+  .navbar ul.nav-menu {
+    border-top: none;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .navbar .nav {
+    margin: 0px;
+  }
 }
 /* Mobile to Tablet */
 @media only screen and (max-width: 767px) {
