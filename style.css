@@ -62,12 +62,12 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #4ea6d1;
+  color: #9adae2;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #1c3e7b;
+  color: #33a2b0;
   text-decoration: underline;
 }
 .navbar .nav > .active > a,
@@ -75,19 +75,19 @@ a:focus {
 .navbar .nav > .active > a:focus,
 .navbar .nav .current-menu-item > a,
 .navbar .nav .current-menu-item > a:hover {
-  color: #1c3e7b;
+  color: #33a2b0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 .navbar .nav > li > a {
   font-size: 21px;
-  color: #4ea6d1;
+  color: #9adae2;
   background-color: transparent;
   text-transform: lowercase;
 }
 .navbar .nav > li > a:hover {
-  color: #1c3e7b;
+  color: #33a2b0;
 }
 .img-rounded {
   -webkit-border-radius: 6px;
@@ -639,13 +639,13 @@ h4 a:hover {
 }
 .menu-header-container {
   width: auto;
-  border-top: 3px solid #4ea6d1;
-  border-bottom: 3px solid #4ea6d1;
+  border-top: 3px solid #9adae2;
+  border-bottom: 3px solid #9adae2;
   padding: 10px 0 9px 0;
   line-height: 20px;
 }
 .menu-header-container .nav li {
-  border-right: 2px solid #4ea6d1;
+  border-right: 2px solid #9adae2;
   margin-top: 0px;
 }
 .menu-header-container .nav a:link,
@@ -674,10 +674,10 @@ h4 a:hover {
 }
 #home-widgets .widget h4.widget-title {
   font-family: 'Roboto Slab', serif;
-  color: #4ea6d1;
+  color: #9adae2;
   font-weight: 300;
-  border-top: 1px solid #4ea6d1;
-  border-bottom: 1px solid #4ea6d1;
+  border-top: 1px solid #9adae2;
+  border-bottom: 1px solid #9adae2;
   padding: 10px 0 9px 0;
   line-height: 20px;
   text-align: center;
@@ -685,7 +685,7 @@ h4 a:hover {
 .post-header {
   margin: 0 0px 35px 0px;
   padding: 0 ;
-  border-bottom: 4px solid #1c3e7b;
+  border-bottom: 4px solid #33a2b0;
 }
 /*
 .post-title {
@@ -697,7 +697,7 @@ h4 a:hover {
   padding: 0 0px 20px;
 }
 .breadcrumb {
-  background: rgba(78, 166, 209, 0.1);
+  background: rgba(154, 218, 226, 0.1);
 }
 .breadcrumb > li {
   text-shadow: none;
@@ -748,14 +748,14 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  border-color: #4ea6d1;
+  border-color: #9adae2;
 }
 .wpcf7-form p {
-  color: #4ea6d1;
+  color: #9adae2;
 }
 input[type="submit"] {
   border: none;
-  background-color: #4ea6d1;
+  background-color: #9adae2;
   color: #ffffff;
   background-image: none;
   font-size: 14px;
@@ -764,7 +764,7 @@ input[type="submit"] {
   text-shadow: none;
 }
 input[type="submit"]:hover {
-  background-color: #1c3e7b;
+  background-color: #33a2b0;
   color: white;
 }
 .modal {
