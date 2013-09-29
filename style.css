@@ -618,17 +618,19 @@ h4 a:hover {
   text-align: center;
   margin: 20px 0;
 }
+/*
 .nav-collapse.collapse {
   height: auto;
   overflow: visible;
 }
+*/
+#social-networking {
+  position: relative;
+  float: right;
+}
 /* collapsed navigation button background */
 #menu-above-header .btn.btn-navbar {
   display: none;
-}
-/* collapsed navigation button bars */
-#menu-above-header .navbar .btn-navbar .icon-bar {
-  background-color: black;
 }
 .navbar-inverse .navbar-inner {
   background-color: transparent;
@@ -661,16 +663,25 @@ h4 a:hover {
 .menu-header-container .nav li:last-child a {
   padding-right: 0;
 }
-#menu-under-header.navbar .navbar-inner {
+#menu-under-header.navbar .navbar-inner,
+#menu-above-header.navbar .navbar-inner {
   text-align: center;
   margin: 20px 0;
 }
-#menu-under-header.navbar .navbar-inner .nav {
+#menu-under-header.navbar .navbar-inner .nav,
+#menu-above-header.navbar .navbar-inner .nav {
   float: none;
   display: inline-block;
 }
-#menu-under-header.navbar .nav > li > a {
+#menu-under-header.navbar .nav > li > a,
+#menu-above-header.navbar .nav > li > a {
   padding: 0px 10px 0px;
+}
+#footer #footer-links {
+  float: none;
+}
+#footer #footer-links .navbar .nav > li > a {
+  font-size: 10.5px;
 }
 #home-widgets .widget h4.widget-title {
   font-family: 'Roboto Slab', serif;
@@ -682,16 +693,38 @@ h4 a:hover {
   line-height: 20px;
   text-align: center;
 }
+body {
+  background: #ffe8c9;
+}
+#wrapper {
+  margin: 20px;
+}
+#wrapper .container {
+  background-color: #ffffff;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 3px 1px #9adae2;
+  -moz-box-shadow: 0 0 3px 1px #9adae2;
+  box-shadow: 0 0 3px 1px #9adae2;
+}
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container,
+#head-wrapper,
+.home-widgets,
+#footer-widgets .container,
+#footer #sub-floor .container {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
 .post-header {
   margin: 0 0px 35px 0px;
   padding: 0 ;
   border-bottom: 4px solid #33a2b0;
 }
-/*
-.post-title {
-    margin: 0 0 -18px 30px;
-}
-*/
 .entry-content,
 .entry-summary {
   padding: 0 0px 20px;
@@ -731,6 +764,39 @@ h4 a:hover {
 #respond {
   border: none;
   box-shadow: none;
+}
+.page h1.post-title {
+  color: #4FB4D0;
+  background: #ffffff;
+  margin: 0 0px -15px 50px;
+  padding: 0 5px;
+  display: inline;
+  float: left;
+  clear: both;
+  text-transform: lowercase;
+}
+h1.post-title {
+  color: #4FB4D0;
+}
+#footer,
+#footer #sub-floor {
+  background: none;
+}
+#footer #footer-widgets {
+  margin-top: 40px;
+  border-top: 2px solid #9adae2;
+  padding-top: 20px;
+}
+#footer #sub-floor #credit {
+  float: none;
+  color: #999999;
+  text-align: left;
+}
+#footer #sub-floor #credit a {
+  color: #9adae2;
+}
+#footer #sub-floor #credit a:hover {
+  color: #33a2b0;
 }
 textarea,
 input[type="text"],

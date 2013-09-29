@@ -67,9 +67,16 @@ Template: standard
 
 // general
 
+/*
 .nav-collapse.collapse {
   height: auto;
   overflow: visible;
+}
+*/
+
+#social-networking {
+    position: relative;
+    float: right;
 }
 
 /* collapsed navigation button background */
@@ -77,10 +84,6 @@ Template: standard
     display: none;
 }
 
-/* collapsed navigation button bars */
-#menu-above-header .navbar .btn-navbar .icon-bar {
-background-color: black;
-}
 
 .navbar-inverse .navbar-inner {
 	background-color: transparent;
@@ -88,7 +91,8 @@ background-color: black;
 	.box-shadow(none);
 }
 
-.menu-header-container {
+.menu-header-container,
+ {
     width: auto;
     border-top: 3px solid @blue;
     border-bottom: 3px solid @blue;
@@ -117,8 +121,10 @@ background-color: black;
     }
 }
 
-// menu below header
-#menu-under-header.navbar {
+// menu header
+#menu-under-header.navbar,
+#menu-above-header.navbar,
+ {
 	.navbar-inner {
     	text-align: center;
     	margin: @baseLineHeight 0;
@@ -132,6 +138,14 @@ background-color: black;
 	.nav>li>a {
 		padding: 0px 10px 0px;
 	}
+}
+
+
+#footer #footer-links {
+    float: none;
+        .navbar .nav > li > a {
+            font-size: (@baseFontSize * .75) ;
+            }
 }
 
 
@@ -153,6 +167,37 @@ background-color: black;
 
 // misc classes/elements
 // -------------------------
+
+// Wrapper
+
+body {
+    background: #ffe8c9;
+}
+
+#wrapper {
+	margin: 20px;
+}
+
+#wrapper .container {
+	background-color: @white;
+	padding: 25px;
+    .box-shadow(0 0 3px 1px @blue);
+}
+
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container,
+#head-wrapper,
+.home-widgets,
+#footer-widgets .container,
+#footer #sub-floor .container {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    .box-shadow (none) !important;
+}
+
+
 .post-header {
     margin: 0 0px 35px 0px;
     padding: 0 ;
@@ -194,7 +239,44 @@ background-color: black;
     box-shadow: none;
 }
 
+.page h1.post-title {
+    color: #4FB4D0;
+    background: @white;
+    margin: 0 0px -15px 50px;
+    padding: 0 5px;
+    display: inline;
+    float: left;
+    clear: both;
+    text-transform: lowercase;
+}
 
+h1.post-title {
+    color: #4FB4D0;
+}
+
+#footer,
+#footer #sub-floor {
+    background: none;
+}
+
+#footer #footer-widgets {
+    margin-top: 40px;
+    border-top: 2px solid @blue;
+    padding-top: @baseLineHeight;
+}
+
+#footer #sub-floor #credit {
+    float: none;
+    color: @grayLight;
+    text-align: left;
+
+        a {
+    color: @linkColor;
+        &:hover {
+            color: @linkColorHover;
+        }
+    }
+}
 
 //  Forms & Contact Form 7
 // -------------------------

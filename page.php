@@ -10,11 +10,12 @@
  * @version	3.1
  */
 ?>
-<?php get_header(); ?>
 <?php $presentation_options = get_option( 'standard_theme_presentation_options' ); ?>
 
 <div id="wrapper">
 	<div class="container">
+	<?php get_header(); ?>
+
 		<div class="row">
 
 				<?php if ( 'left_sidebar_layout' == $presentation_options['layout'] ) { ?>
@@ -52,6 +53,6 @@
 				<?php } // end if ?>
 
 		</div><!--/ row -->
+		<?php get_footer(); ?>
 	</div><!--/container -->
 </div> <!-- /#wrapper -->
-<?php get_footer(); ?>

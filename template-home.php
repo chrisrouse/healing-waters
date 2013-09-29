@@ -9,12 +9,11 @@
  * @version	3.1
  */
 ?>
-<?php get_header(); ?>
 
 <div id="wrapper">
 	<div class="container">
-								<?php echo do_shortcode( '[responsive_slider]' ); ?>
-
+	<?php get_header(); ?>
+        <?php echo do_shortcode( '[responsive_slider]' ); ?>
 		<div class="row">
 			<div id="main" class="span12 clearfix" role="main">
 
@@ -34,7 +33,6 @@
 
     						<?php if( is_active_sidebar( 'sidebar-7' ) || is_active_sidebar( 'sidebar-8' ) || is_active_sidebar( 'sidebar-9' ) ) { ?>
     	<div id="home-widgets" class="clearfix">
-    		<div class="container">
     			<div class="row">
 
     				<div id="left-home-widgets" class="span4 clearfix">
@@ -50,6 +48,8 @@
     				</div><!-- /#right-home-widget -->
 
     			</div><!-- /row -->
+    					<?php get_footer(); ?>
+
     		</div><!-- /container -->
     	</div><!-- /#home-widgets -->
     <?php } // end if ?>
@@ -59,6 +59,7 @@
 			</div><!-- /#main -->
 
 		</div><!--/row -->
+		  <?php get_footer(); ?>
+
 	</div><!-- /container -->
 </div> <!-- /#wrapper -->
-<?php get_footer(); ?>

@@ -81,6 +81,7 @@
 		<?php get_template_part( 'lib/breadcrumbs/standard_breadcrumbs' ); ?>
 
 		<?php if( has_nav_menu( 'menu_above_logo' ) ) { ?>
+
 			<div id="menu-above-header" class="menu-navigation navbar navbar-inverse navbar-fixed-top">
 				<div class="navbar-inner ">
 					<div class="container">
@@ -91,7 +92,7 @@
 						  <span class="icon-bar"></span>
 						</a>
 
-						<div class="nav-collapse above-header-nav-collapse">
+						<div class="above-header-nav-collapse">
 							<?php
 								wp_nav_menu(
 									array(

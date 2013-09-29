@@ -68,19 +68,7 @@
 									$chrisrouse_url = 'http://www.create156.com/';
 								?>
 
-								<?php if( null != get_page_by_path( 'privacy-policy' ) && 0 != get_page_by_path( 'privacy-policy' )->ID && 'publish' == get_page_by_path( 'privacy-policy' )->post_status ) { ?>
-									<?php printf( __( '
-									&copy; %1$s
-									%2$s.
-									Designed by %3$s.
-                                    Developed by %4$s', 'standard' ),
-									date( 'Y' ),
-									'<a href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a>',
-									 '<a href="' . $designer_url . '" target="_blank">Sarah Hayes</a>',
-									 '<a href="' . $chrisrouse_url . '" target="_blank">Chris Rouse</a>' ); ?>
-								<?php } else { ?>
-									<?php printf( __( '&copy; %1$s %2$s // Designed by %3$s. Developed by %4$s.' , 'standard' ), date( 'Y' ), '<a href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a>', '<a href="' . $designer_url . '" target="_blank">Sarah Hayes</a>', '<a href="' . $chrisrouse_url . '" target="_blank">Chris Rouse</a>' ); ?>
-								<?php } // end if/else ?>
+									<?php printf( __( '&copy; %1$s %2$s <br><small> Built by %4$s. <br>Designed by %3$s. </small>' ), date( 'Y' ), '<a href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a>', '<a href="' . $designer_url . '" target="_blank">Sarah Hayes</a>', '<a href="' . $chrisrouse_url . '" target="_blank">Chris Rouse</a>' ); ?>
 							</div><!-- /#credits -->
 						</div> <!-- span12 -->
 						</div><!--/span12-->
