@@ -64,13 +64,15 @@ add_action( 'wp_enqueue_scripts', 'standard_child_theme_kit_reorder_styles', 100
 /* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ CUSTOMIZATIONS /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ */
 
 //load google webfont
-	wp_register_style( 'google_font_sans_serif', 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' );
+	wp_register_style( 'google_font_sans_serif_alt', 'http://fonts.googleapis.com/css?family=Exo:300,400' );
+wp_enqueue_style( 'google_font_sans_serif_alt' );
+
+	wp_register_style( 'google_font_sans_serif', 'http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600' );
 wp_enqueue_style( 'google_font_sans_serif' );
 
 //load google webfont
-	wp_register_style( 'google_font_serif', 'http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700' );
+	wp_register_style( 'google_font_serif', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,700' );
 wp_enqueue_style( 'google_font_serif' );
-
 
 
 /**
@@ -118,4 +120,3 @@ function add_admin_sidebars() {
 
 } // end add_theme_sidebars
 add_action('init', 'add_admin_sidebars');
-

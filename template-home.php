@@ -9,10 +9,10 @@
  * @version	3.1
  */
 ?>
+	<?php get_header(); ?>
 
 <div id="wrapper">
 	<div class="container">
-	<?php get_header(); ?>
         <?php echo do_shortcode( '[responsive_slider]' ); ?>
 		<div class="row">
 			<div id="main" class="span12 clearfix" role="main">
@@ -59,7 +59,6 @@
 			</div><!-- /#main -->
 
 		</div><!--/row -->
-		  <?php get_footer(); ?>
-
 	</div><!-- /container -->
 </div> <!-- /#wrapper -->
+		  <?php get_footer(); ?>

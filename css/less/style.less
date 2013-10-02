@@ -64,26 +64,17 @@ Template: standard
 
 // navigation
 // -------------------------
-
-// general
-
-/*
-.nav-collapse.collapse {
-  height: auto;
-  overflow: visible;
+#menu-above-header {
+    background: @blue;
+        .btn.btn-navbar {
+            display: none;
+        }
 }
-*/
 
 #social-networking {
     position: relative;
     float: right;
 }
-
-/* collapsed navigation button background */
-#menu-above-header .btn.btn-navbar {
-    display: none;
-}
-
 
 .navbar-inverse .navbar-inner {
 	background-color: transparent;
@@ -91,27 +82,17 @@ Template: standard
 	.box-shadow(none);
 }
 
-.menu-header-container,
- {
+.menu-header-container {
     width: auto;
     border-top: 3px solid @blue;
     border-bottom: 3px solid @blue;
-	padding: 10px 0 9px 0;
+	padding: 13px 0 11px 0;
     line-height: @baseLineHeight;
 
     .nav li {
         border-right: 2px solid @blue;
-        margin-top: 0px;
+        margin-top: 5px;
     }
-
-    .nav a:link, .nav a:visited {
-        padding: 0 12px;
-    }
-
-    .nav li:first-child a {
-        padding-left: 0;
-    }
-
     .nav li:last-child {
         border-right: 0;
     }
@@ -121,9 +102,35 @@ Template: standard
     }
 }
 
+.navbar .nav > li {
+     display: inline-block;
+     float: none;
+ }
+
+.navbar ul.nav-menu {
+     border: none;
+     margin-top: 0px;
+     padding-top: 0px;
+ }
+
+.navbar .dropdown-menu {
+font-family: @sansFontFamily;
+background: fade(@blue, 75%);
+    a {
+        text-align: left;
+    	border: none;
+	}
+	> li a {
+        padding: 5px;
+    }
+    li:last-child>a{
+        border-right: 2px solid @blue;
+    }
+}
+
+
 // menu header
 #menu-under-header.navbar,
-#menu-above-header.navbar,
  {
 	.navbar-inner {
     	text-align: center;
@@ -141,67 +148,65 @@ Template: standard
 }
 
 
+
+// footer
+
+#footer {
+    background: none;
+}
+
+#footer #sub-floor {
+    background: @blue;
+}
+
+#footer #sub-floor #credit {
+    font-family: @baseFontFamily;
+    float: none;
+    color: @white;
+    text-align: left;
+
+        a {
+    color: @white;
+        &:hover {
+            color: @linkColorHover;
+        }
+    }
+}
+
 #footer #footer-links {
     float: none;
         .navbar .nav > li > a {
-            font-size: (@baseFontSize * .75) ;
+            font-size: @baseFontSize ;
+            color: @white;
+            &:hover {
+                color: @linkColorHover;
             }
-}
-
-
-// Front
-// -------------------------
-#home-widgets {
-    .widget h4.widget-title {
-        font-family: @serifFontFamily;
-        color: @blue;
-        font-weight: @fontLight;
-        border-top: 1px solid @blue;
-        border-bottom: 1px solid @blue;
-    	padding: 10px 0 9px 0;
-        line-height: @baseLineHeight;
-        text-align: center;
-    }
+            }
 }
 
 
 // misc classes/elements
 // -------------------------
-
-// Wrapper
-
 body {
-    background: #ffe8c9;
-}
-
-#wrapper {
-	margin: 20px;
-}
-
-#wrapper .container {
-	background-color: @white;
-	padding: 25px;
-    .box-shadow(0 0 3px 1px @blue);
-}
-
-.navbar-static-top .container,
-.navbar-fixed-top .container,
-.navbar-fixed-bottom .container,
-#head-wrapper,
-.home-widgets,
-#footer-widgets .container,
-#footer #sub-floor .container {
-    background-color: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    .box-shadow (none) !important;
+    font-family: @serifFontFamily;
 }
 
 
 .post-header {
+    font-family: @baseFontFamily;
     margin: 0 0px 35px 0px;
     padding: 0 ;
-    border-bottom: 4px solid @blueDark;
+    border-bottom: 3px solid @blueDark;
+}
+
+.post-title {
+    a
+     {
+    color: @blue !important;
+    &:hover {
+        color: @blueDark !important;
+    }
+     }
 }
 
 .entry-content, .entry-summary {
@@ -239,8 +244,20 @@ body {
     box-shadow: none;
 }
 
+.post-date {
+    color: @white;
+    background: @blueDark;
+    margin: 0 10px 0px 0px;
+    padding: 1px 5px;
+    display: inline;
+    float: left;
+    clear: both;
+}
+
 .page h1.post-title {
-    color: #4FB4D0;
+    color: @blueDark;
+    font-family: @sansAltFontFamily;
+    font-weight: 300;
     background: @white;
     margin: 0 0px -15px 50px;
     padding: 0 5px;
@@ -251,32 +268,55 @@ body {
 }
 
 h1.post-title {
-    color: #4FB4D0;
+    color: @blue;
 }
 
-#footer,
-#footer #sub-floor {
-    background: none;
+.format-aside .entry-content {
+    padding: 40px 20px 20px 100px;
 }
 
-#footer #footer-widgets {
-    margin-top: 40px;
-    border-top: 2px solid @blue;
-    padding-top: @baseLineHeight;
+
+.format-aside .aside-post-title {
+    color: @blue;
 }
 
-#footer #sub-floor #credit {
-    float: none;
-    color: @grayLight;
-    text-align: left;
-
-        a {
-    color: @linkColor;
-        &:hover {
-            color: @linkColorHover;
+.format-aside .aside-date {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    background: @blueDark;
+    color: #fff;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    padding: 2px 5px;
+    span {
+        padding-top: 0;
+        font-family: @baseFontFamily;
+        text-transform: capitalize;
+        &.the-time {
+            font-size: @baseFontSize;
         }
     }
 }
+
+.post-meta {
+    font-family: @baseFontFamily;
+}
+
+#home-widgets .widget h4.widget-title,
+.widget h4.widget-title {
+    font-family: @baseFontFamily;
+    font-size: (@baseFontSize * 2);
+    border-top: 1px solid @blue;
+    border-bottom: 1px solid @blue;
+    padding: 15px 0 13px 0;
+    color: @blue;
+    text-align: center;
+
+}
+
+
 
 //  Forms & Contact Form 7
 // -------------------------
@@ -312,7 +352,7 @@ input[type="submit"] {
     color: @white;
     background-image: none;
     font-size: @baseFontSize;
-    padding: 10px 60px;
+    //padding: 10px 60px;
     line-height: @baseLineHeight;
     text-shadow: none;
 
@@ -345,27 +385,31 @@ input[type="submit"] {
 
 /* Smartphones */
 @media (max-width: 480px) {
+/*
     #menu-under-header.navbar .nav > li > a {
         font-size: @baseLineHeight;
     }
+*/
 }
 
 
 /* Tablet & Mobile */
 @media (max-width: 979px) {
 
- .navbar .nav > li {
+ /*
+.navbar .nav > li {
  display: inline-block;
  float: none;
  }
  .navbar ul.nav-menu {
- border-top: none;
- margin-top: 0px;
- padding-top: 0px;
+ border: none;
+ //margin-top: 0px;
+ //padding-top: 0px;
  }
  .navbar .nav {
- margin: 0px;
+ //margin: 0px;
  }
+*/
 }
 /* Mobile to Tablet */
 @media only screen and (max-width: 767px) {
