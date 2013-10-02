@@ -48,7 +48,6 @@
     				</div><!-- /#right-home-widget -->
 
     			</div><!-- /row -->
-    					<?php get_footer(); ?>
 
     		</div><!-- /container -->
     	</div><!-- /#home-widgets -->
@@ -61,4 +60,4 @@
 		</div><!--/row -->
 	</div><!-- /container -->
 </div> <!-- /#wrapper -->
-		  <?php get_footer(); ?>
+<?php get_footer(); ?>
