@@ -1,22 +1,21 @@
 <?php
 /**
- * The template for displaying single pages without s.
+ * The template for displaying single pages.
  *
-
- *
- * The template for rendering pages without sidebars.
  * @package Standard
  * @since 	3.0
  * @version	3.1
  */
 ?>
+<?php get_header(); ?>
 <?php $presentation_options = get_option( 'standard_theme_presentation_options' ); ?>
-	<?php get_header(); ?>
 
 <div id="wrapper">
 	<div class="container">
-
 		<div class="row">
+            <div class="post-header clearfix">
+                <h1 class="post-title entry-title"><?php the_title(); ?></h1>
+            </div> <!-- /.post-header -->
 
 				<?php if ( 'left_sidebar_layout' == $presentation_options['layout'] ) { ?>
 					<?php get_sidebar(); ?>
@@ -34,10 +33,7 @@
 						<?php while ( have_posts() ) { ?>
 							<?php the_post(); ?>
 							<div id="post-<?php the_ID(); ?> format-standard" <?php post_class( 'post' ); ?>>
-								<div class="post-header clearfix">
-									<h1 class="post-title entry-title"><?php the_title(); ?></h1>
-								</div> <!-- /.post-header -->
-								<div id="content-<?php the_ID(); ?>" class="entry-content clearfix">
+																<div id="content-<?php the_ID(); ?>" class="entry-content clearfix">
 									<div class="content">
 										<?php the_content(); ?>
 									</div><!-- /.entry-content -->
@@ -45,7 +41,6 @@
 							</div> <!-- /#post --->
 						<?php } // end while ?>
 					<?php } // end if ?>
-
 				</div><!-- /#main -->
 
 				<?php if ( 'right_sidebar_layout' == $presentation_options['layout'] ) {  ?>
@@ -55,4 +50,4 @@
 		</div><!--/ row -->
 	</div><!--/container -->
 </div> <!-- /#wrapper -->
-		<?php get_footer(); ?>
+<?php get_footer(); ?>

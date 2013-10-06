@@ -10,7 +10,6 @@
  */
 ?>
 	<?php get_header(); ?>
-
 <div id="wrapper">
 	<div class="container">
         <?php echo do_shortcode( '[responsive_slider]' ); ?>

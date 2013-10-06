@@ -559,10 +559,7 @@ address {
 /* Customizations
 ---------------------------------------------------------------------------------- */
 .responsive-slider.flexslider .slide-title a {
-  top: 10px;
-  right: 10px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 14px;
+  display: none;
 }
 .responsive-slider.flexslider .flex-control-nav {
   display: none;
@@ -578,6 +575,9 @@ address {
 #header-image p a {
   text-align: center;
   margin: 20px 0;
+}
+.navbar .nav {
+  margin: 0;
 }
 #menu-above-header {
   background: #008ac5;
@@ -602,6 +602,7 @@ address {
   border-bottom: 3px solid #008ac5;
   padding: 13px 0 11px 0;
   line-height: 20px;
+  margin-left: -20px;
 }
 .menu-header-container .nav li {
   border-right: 2px solid #008ac5;
@@ -624,7 +625,6 @@ address {
 }
 .navbar .dropdown-menu {
   font-family: 'Josefin Sans', sans-serif;
-  background: rgba(0, 138, 197, 0.75);
 }
 .navbar .dropdown-menu a {
   text-align: left;
@@ -647,11 +647,15 @@ address {
 #menu-under-header.navbar .nav > li > a {
   padding: 0px 10px 0px;
 }
-#footer {
-  background: none;
-}
+#footer,
 #footer #sub-floor {
   background: #008ac5;
+}
+#footer #footer-widgets {
+  border-top: 5px solid #1b4583;
+}
+#footer #footer-widgets .container {
+  border-bottom: 1px solid #1b4583;
 }
 #footer #sub-floor #credit {
   font-family: 'Josefin Sans', sans-serif;
@@ -677,6 +681,27 @@ address {
 }
 body {
   font-family: 'Droid Serif', serif;
+}
+#wrapper {
+  padding-top: 0;
+}
+h3 {
+  font-family: 'Exo', sans-serif;
+  font-weight: 300;
+  color: #1b4583;
+}
+address {
+  font-family: 'Exo', sans-serif;
+  font-weight: 300;
+  color: #008ac5;
+  line-height: 2px;
+}
+.post,
+#comments,
+#pings,
+#no-comments,
+#respond {
+  margin-left: -20px;
 }
 .post-header {
   font-family: 'Josefin Sans', sans-serif;
@@ -783,13 +808,14 @@ h1.post-title {
   font-family: 'Josefin Sans', sans-serif;
 }
 #home-widgets .widget h4.widget-title,
-.widget h4.widget-title {
+.widget h4.widget-title,
+#footer-widgets .widget h4.widget-title {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 28px;
-  border-top: 1px solid #008ac5;
-  border-bottom: 1px solid #008ac5;
+  border-top: 1px solid #1b4583;
+  border-bottom: 1px solid #1b4583;
   padding: 15px 0 13px 0;
-  color: #008ac5;
+  color: #1b4583;
   text-align: center;
 }
 textarea,
@@ -810,8 +836,13 @@ input[type="color"],
 .uneditable-input {
   border-color: #008ac5;
 }
+.wpcf7-form {
+  height: 800px;
+}
 .wpcf7-form p {
   color: #008ac5;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 17.5px;
 }
 input[type="submit"] {
   border: none;
@@ -825,6 +856,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #1b4583;
   color: white;
+}
+.googlemap {
+  width: 620px;
+  max-height: 300px;
+}
+.gmap {
+  padding: none;
 }
 .modal {
   color: #333333;
@@ -868,7 +906,9 @@ input[type="submit"]:hover {
 }
 /* Mobile to Tablet */
 @media only screen and (max-width: 767px) {
-  
+  input[type="text"] {
+    width: 98%;
+  }
 }
 /* Landscape Tablets */
 @media (min-width: 768px) and (max-width: 768px) {

@@ -34,10 +34,7 @@ Template: standard
 // Responsive Slider
 // -------------------------
 .responsive-slider.flexslider .slide-title a {
-    top: 10px;
-    right: 10px;
-    font-family: @baseFontFamily;
-    font-size: @baseFontSize;
+    display: none;
 }
 
 .responsive-slider.flexslider .flex-control-nav {
@@ -64,6 +61,10 @@ Template: standard
 
 // navigation
 // -------------------------
+.navbar .nav {
+    margin: 0;
+}
+
 #menu-above-header {
     background: @blue;
         .btn.btn-navbar {
@@ -88,6 +89,7 @@ Template: standard
     border-bottom: 3px solid @blue;
 	padding: 13px 0 11px 0;
     line-height: @baseLineHeight;
+    margin-left: -20px;
 
     .nav li {
         border-right: 2px solid @blue;
@@ -115,7 +117,7 @@ Template: standard
 
 .navbar .dropdown-menu {
 font-family: @sansFontFamily;
-background: fade(@blue, 75%);
+//background: fade(@blue, 75%);
     a {
         text-align: left;
     	border: none;
@@ -151,12 +153,15 @@ background: fade(@blue, 75%);
 
 // footer
 
-#footer {
-    background: none;
+#footer, #footer #sub-floor {
+    background: @blue;
 }
 
-#footer #sub-floor {
-    background: @blue;
+#footer #footer-widgets {
+    border-top: 5px solid @blueDark;
+    .container {
+        border-bottom: 1px solid @blueDark;
+    }
 }
 
 #footer #sub-floor #credit {
@@ -187,10 +192,31 @@ background: fade(@blue, 75%);
 
 // misc classes/elements
 // -------------------------
+
 body {
     font-family: @serifFontFamily;
 }
 
+#wrapper {
+    padding-top: 0;
+}
+
+h3 {
+    font-family: @sansAltFontFamily;
+    font-weight: 300;
+    color: @blueDark;
+}
+
+address {
+    font-family: @sansAltFontFamily;
+    font-weight: 300;
+    color: @blue;
+    line-height: (@baseLineHeight / 10);
+}
+
+.post, #comments, #pings, #no-comments, #respond {
+    margin-left: -20px;
+}
 
 .post-header {
     font-family: @baseFontFamily;
@@ -305,13 +331,14 @@ h1.post-title {
 }
 
 #home-widgets .widget h4.widget-title,
-.widget h4.widget-title {
+.widget h4.widget-title,
+#footer-widgets .widget h4.widget-title {
     font-family: @baseFontFamily;
     font-size: (@baseFontSize * 2);
-    border-top: 1px solid @blue;
-    border-bottom: 1px solid @blue;
+    border-top: 1px solid @blueDark;
+    border-bottom: 1px solid @blueDark;
     padding: 15px 0 13px 0;
-    color: @blue;
+    color: @blueDark;
     text-align: center;
 
 }
@@ -341,8 +368,11 @@ input[type="color"],
 }
 
 .wpcf7-form {
+height: 800px;
     p {
     color: @blue;
+    font-family: @baseFontFamily;
+    font-size: (@baseFontSize * 1.25);
     }
 }
 
@@ -361,6 +391,15 @@ input[type="submit"] {
         color: white;
     }
 }
+
+//maps
+// -------------------------
+
+.googlemap {
+    width: 620px;
+    max-height: 300px;
+    }
+    .gmap {padding: none;}
 
 
 // modal
@@ -413,7 +452,9 @@ input[type="submit"] {
 }
 /* Mobile to Tablet */
 @media only screen and (max-width: 767px) {
-
+    input[type="text"] {
+        width: 98%;
+    }
 }
 
 
