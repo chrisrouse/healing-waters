@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying single pages.
+ * Template Name: Sidebars, No Comments
  *
  * @package Standard
  * @since 	3.0
@@ -13,10 +13,9 @@
 <div id="wrapper">
 	<div class="container">
 		<div class="row">
-            <div class="post-header clearfix">
-                <h1 class="post-title entry-title"><?php the_title(); ?></h1>
-            </div> <!-- /.post-header -->
-
+			<div class="post-header clearfix">
+				<h1 class="post-title entry-title"><?php the_title(); ?></h1>
+			</div> <!-- /.post-header -->
 				<?php if ( 'left_sidebar_layout' == $presentation_options['layout'] ) { ?>
 					<?php get_sidebar(); ?>
 				<?php } // end if ?>
@@ -33,7 +32,8 @@
 						<?php while ( have_posts() ) { ?>
 							<?php the_post(); ?>
 							<div id="post-<?php the_ID(); ?> format-standard" <?php post_class( 'post' ); ?>>
-																<div id="content-<?php the_ID(); ?>" class="entry-content clearfix">
+
+								<div id="content-<?php the_ID(); ?>" class="entry-content clearfix">
 									<div class="content">
 										<?php the_content(); ?>
 									</div><!-- /.entry-content -->

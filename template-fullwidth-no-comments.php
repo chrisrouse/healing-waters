@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full-Width (No Comments)
+ * Template Name: Full-Width, No Comments
  *
  * The template for rendering pages without sidebars.
  *
@@ -9,12 +9,12 @@
  * @version	3.1
  */
 ?>
-	<?php get_header(); ?>
+<?php get_header(); ?>
 
 <div id="wrapper">
 	<div class="container">
 		<div class="row">
-			<div class="post-header clearfix">
+            <div class="post-header clearfix">
 				<h1 class="post-title entry-title"><?php the_title(); ?></h1>
 			</div> <!-- /.post-header -->
 			<div id="main" class="span12 clearfix" role="main">
@@ -37,4 +37,4 @@
 		</div><!--/row -->
 	</div><!-- /container -->
 </div> <!-- /#wrapper -->
-		<?php get_footer(); ?>
+<?php get_footer(); ?>

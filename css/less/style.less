@@ -41,12 +41,6 @@ Template: standard
     display: none;
 }
 
-// contact form 7
-// -------------------------
-.wpcf7-form textarea {
-    width: 95%;
-}
-
 // Header Box
 // -------------------------
 #logo {
@@ -59,11 +53,14 @@ Template: standard
 	margin: @baseLineHeight 0;
 }
 
+
 // navigation
 // -------------------------
 .navbar .nav {
     margin: 0;
 }
+
+
 
 #menu-above-header {
     background: @blue;
@@ -89,7 +86,6 @@ Template: standard
     border-bottom: 3px solid @blue;
 	padding: 13px 0 11px 0;
     line-height: @baseLineHeight;
-    margin-left: -20px;
 
     .nav li {
         border-right: 2px solid @blue;
@@ -104,34 +100,6 @@ Template: standard
     }
 }
 
-.navbar .nav > li {
-     display: inline-block;
-     float: none;
- }
-
-.navbar ul.nav-menu {
-     border: none;
-     margin-top: 0px;
-     padding-top: 0px;
- }
-
-.navbar .dropdown-menu {
-font-family: @sansFontFamily;
-//background: fade(@blue, 75%);
-    a {
-        text-align: left;
-    	border: none;
-	}
-	> li a {
-        padding: 5px;
-    }
-    li:last-child>a{
-        border-right: 2px solid @blue;
-    }
-}
-
-
-// menu header
 #menu-under-header.navbar,
  {
 	.navbar-inner {
@@ -147,6 +115,47 @@ font-family: @sansFontFamily;
 	.nav>li>a {
 		padding: 0px 10px 0px;
 	}
+}
+
+.navbar .nav > li {
+     display: inline-block;
+     float: none;
+     > .dropdown-menu:before {
+         border-bottom: 7px solid @blue;
+         border-bottom-color: @blue;
+     }
+ }
+
+.navbar ul.nav-menu {
+     border: none;
+     margin-top: 0px;
+     padding-top: 0px;
+      }
+
+.navbar .dropdown-menu {
+    top: 130%;
+    font-family: @sansFontFamily;
+    font-size: 30px;
+    font-weight: 300;
+    color: @navColor;
+    background-color: transparent;
+    text-transform: lowercase;
+    background: @white;
+    border: 1px solid @blue;
+        a {
+            text-align: left;
+        	border: none;
+        	color: @blue;
+    	}
+    	> li a {
+            padding: 5px;
+            &:hover {
+                color: @blueDark;
+            }
+        }
+        li:last-child>a{
+            border-right: 2px solid @blue;
+        }
 }
 
 
@@ -214,13 +223,13 @@ address {
     line-height: (@baseLineHeight / 10);
 }
 
-.post, #comments, #pings, #no-comments, #respond {
-    margin-left: -20px;
+.page .post-header {
+    margin-left: 20px;
 }
 
 .post-header {
     font-family: @baseFontFamily;
-    margin: 0 0px 35px 0px;
+    margin: 0 0 20px 0px;
     padding: 0 ;
     border-bottom: 3px solid @blueDark;
 }
@@ -343,6 +352,49 @@ h1.post-title {
 
 }
 
+.btn-info {
+    font-size: (@baseFontSize * 1.5);
+    text-shadow: none;
+    background-image: none;
+    background-color: @blue;
+    border-color: @blueDark;
+    .box-shadow(none);
+    &:hover {
+        background-color: @blueDark;
+        text-decoration: none;
+    }
+}
+
+//Classes
+// -------------------------
+.symple-one-half {
+width: 45%;
+}
+
+.class-title h6 {
+    background: @sand;
+    font-family: @baseFontFamily;
+    font-size: 16px;
+    line-height: @baseLineHeight;
+    text-align: center;
+    border: 1px solid @blue;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.class-title {
+    //margin-bottom: 20px;
+    h2 {
+    color: @white;
+    font-family: @baseFontFamily;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 40px 5px 0;
+    background: url("http://localhost:8888/healing-waters/wp-content/uploads/2013/10/HW-banner-1.jpg") no-repeat ;
+    text-align: right;
+    text-transform: lowercase;
+    }
+}
 
 
 //  Forms & Contact Form 7
@@ -367,8 +419,11 @@ input[type="color"],
     border-color: @blue;
 }
 
+
 .wpcf7-form {
-height: 800px;
+    textarea {
+        width: 95%;
+    }
     p {
     color: @blue;
     font-family: @baseFontFamily;
@@ -391,6 +446,8 @@ input[type="submit"] {
         color: white;
     }
 }
+
+
 
 //maps
 // -------------------------
@@ -454,6 +511,9 @@ input[type="submit"] {
 @media only screen and (max-width: 767px) {
     input[type="text"] {
         width: 98%;
+    }
+    .symple-one-half {
+        width: 100%;
     }
 }
 

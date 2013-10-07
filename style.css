@@ -564,9 +564,6 @@ address {
 .responsive-slider.flexslider .flex-control-nav {
   display: none;
 }
-.wpcf7-form textarea {
-  width: 95%;
-}
 #logo {
   text-align: center;
   float: none;
@@ -602,7 +599,6 @@ address {
   border-bottom: 3px solid #008ac5;
   padding: 13px 0 11px 0;
   line-height: 20px;
-  margin-left: -20px;
 }
 .menu-header-container .nav li {
   border-right: 2px solid #008ac5;
@@ -614,28 +610,6 @@ address {
 .menu-header-container .nav li:last-child a {
   padding-right: 0;
 }
-.navbar .nav > li {
-  display: inline-block;
-  float: none;
-}
-.navbar ul.nav-menu {
-  border: none;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-.navbar .dropdown-menu {
-  font-family: 'Josefin Sans', sans-serif;
-}
-.navbar .dropdown-menu a {
-  text-align: left;
-  border: none;
-}
-.navbar .dropdown-menu > li a {
-  padding: 5px;
-}
-.navbar .dropdown-menu li:last-child > a {
-  border-right: 2px solid #008ac5;
-}
 #menu-under-header.navbar .navbar-inner {
   text-align: center;
   margin: 20px 0;
@@ -646,6 +620,44 @@ address {
 }
 #menu-under-header.navbar .nav > li > a {
   padding: 0px 10px 0px;
+}
+.navbar .nav > li {
+  display: inline-block;
+  float: none;
+}
+.navbar .nav > li > .dropdown-menu:before {
+  border-bottom: 7px solid #008ac5;
+  border-bottom-color: #008ac5;
+}
+.navbar ul.nav-menu {
+  border: none;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.navbar .dropdown-menu {
+  top: 130%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: #008ac5;
+  background-color: transparent;
+  text-transform: lowercase;
+  background: #ffffff;
+  border: 1px solid #008ac5;
+}
+.navbar .dropdown-menu a {
+  text-align: left;
+  border: none;
+  color: #008ac5;
+}
+.navbar .dropdown-menu > li a {
+  padding: 5px;
+}
+.navbar .dropdown-menu > li a:hover {
+  color: #1b4583;
+}
+.navbar .dropdown-menu li:last-child > a {
+  border-right: 2px solid #008ac5;
 }
 #footer,
 #footer #sub-floor {
@@ -696,16 +708,12 @@ address {
   color: #008ac5;
   line-height: 2px;
 }
-.post,
-#comments,
-#pings,
-#no-comments,
-#respond {
-  margin-left: -20px;
+.page .post-header {
+  margin-left: 20px;
 }
 .post-header {
   font-family: 'Josefin Sans', sans-serif;
-  margin: 0 0px 35px 0px;
+  margin: 0 0 20px 0px;
   padding: 0 ;
   border-bottom: 3px solid #1b4583;
 }
@@ -818,6 +826,43 @@ h1.post-title {
   color: #1b4583;
   text-align: center;
 }
+.btn-info {
+  font-size: 21px;
+  text-shadow: none;
+  background-image: none;
+  background-color: #008ac5;
+  border-color: #1b4583;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-info:hover {
+  background-color: #1b4583;
+  text-decoration: none;
+}
+.symple-one-half {
+  width: 45%;
+}
+.class-title h6 {
+  background: #f2e4ca;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #008ac5;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.class-title h2 {
+  color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 40px 5px 0;
+  background: url("http://localhost:8888/healing-waters/wp-content/uploads/2013/10/HW-banner-1.jpg") no-repeat;
+  text-align: right;
+  text-transform: lowercase;
+}
 textarea,
 input[type="text"],
 input[type="password"],
@@ -836,8 +881,8 @@ input[type="color"],
 .uneditable-input {
   border-color: #008ac5;
 }
-.wpcf7-form {
-  height: 800px;
+.wpcf7-form textarea {
+  width: 95%;
 }
 .wpcf7-form p {
   color: #008ac5;
@@ -908,6 +953,9 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 767px) {
   input[type="text"] {
     width: 98%;
+  }
+  .symple-one-half {
+    width: 100%;
   }
 }
 /* Landscape Tablets */
