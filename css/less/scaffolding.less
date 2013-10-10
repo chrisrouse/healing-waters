@@ -27,33 +27,6 @@ a:focus {
   text-decoration: underline;
 }
 
-// Navigation
-// -------------------------
-
-.navbar .nav {
-	>.active>a,
-	>.active>a:hover,
-	>.active>a:focus,
-	.current-menu-item > a,
-	.current-menu-item > a:hover {
-		color: @navColorHover;
-		.box-shadow(none);
-	}
-	>li>a {
-	    font-family: @sansFontFamily;
-	    font-size: 30px;
-	    font-weight: 300;
-	    color: @navColor;
-	    background-color: transparent;
-	    text-transform: lowercase;
-
-	    &:hover {
-		    color: @navColorHover;
-	    }
-	}
-}
-
-
 // Images
 // -------------------------
 
@@ -66,8 +39,7 @@ a:focus {
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0,0,0,.2);
+  border: 1px solid @blue;
   .box-shadow(0 1px 3px rgba(0,0,0,.1));
 }
 

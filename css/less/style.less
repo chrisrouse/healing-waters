@@ -30,6 +30,43 @@ Template: standard
 
 /* Customizations
 ---------------------------------------------------------------------------------- */
+#wrapper {
+padding: 20px 0 0;
+}
+
+
+h2 {
+	font-size: 35px;
+	font-family: @baseFontFamily;
+	font-weight: 300;
+	color: @blueDark;
+}
+
+h3 {
+    font-family: @sansAltFontFamily;
+    font-weight: 300;
+    color: @blueDark;
+}
+
+h5 {
+	color: @blueDark;
+	font-weight: 300;
+	font-family: @sansAltFontFamily;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid #008ac5;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	background: #f2e4ca;
+}
+
+address {
+	font-size: 16px;
+    font-family: @sansAltFontFamily;
+    font-weight: 300;
+    color: @blue;
+}
 
 // Responsive Slider
 // -------------------------
@@ -54,13 +91,18 @@ Template: standard
 }
 
 
+
 // navigation
 // -------------------------
-.navbar .nav {
-    margin: 0;
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner,
+.navbar-inverse .navbar-inner {
+	background-color: transparent;
+	background-image: none;
+	.box-shadow(none);
+	filter: none;
 }
-
-
 
 #menu-above-header {
     background: @blue;
@@ -69,42 +111,41 @@ Template: standard
         }
 }
 
-#social-networking {
-    position: relative;
-    float: right;
+#menu-under-header.navbar .nav {
+	>.active>a,
+	>.active>a:hover,
+	>.active>a:focus,
+	.current-menu-item > a,
+	.current-menu-item > a:hover {
+		color: @navColorHover;
+		.box-shadow(none);
+	}
+	>li>a {
+	    font-family: @sansFontFamily;
+	    font-size: 25px;
+	    font-weight: 300;
+	    color: @navColor;
+	    background-color: transparent;
+	    text-transform: lowercase;
+
+	    &:hover {
+		    color: @navColorHover;
+	    }
+	}
 }
 
-.navbar-inverse .navbar-inner {
-	background-color: transparent;
-	background-image: none;
-	.box-shadow(none);
-}
-
-.menu-header-container {
+#menu-under-header .menu-header-container {
     width: auto;
     border-top: 3px solid @blue;
     border-bottom: 3px solid @blue;
-	padding: 13px 0 11px 0;
-    line-height: @baseLineHeight;
-
-    .nav li {
-        border-right: 2px solid @blue;
-        margin-top: 5px;
-    }
-    .nav li:last-child {
-        border-right: 0;
-    }
-
-    .nav li:last-child a {
-        padding-right: 0;
-    }
+	padding-top: 6px;
+	padding-bottom: 5px;
 }
 
-#menu-under-header.navbar,
+#menu-under-header.navbar
  {
 	.navbar-inner {
     	text-align: center;
-    	margin: @baseLineHeight 0;
     }
 
 	.navbar-inner .nav {
@@ -114,51 +155,47 @@ Template: standard
 
 	.nav>li>a {
 		padding: 0px 10px 0px;
+		border-right: 2px solid @blue;
+	}
+	
+	.nav>li:last-child>a {
+		border-right: 0px;
 	}
 }
 
-.navbar .nav > li {
-     display: inline-block;
-     float: none;
-     > .dropdown-menu:before {
-         border-bottom: 7px solid @blue;
-         border-bottom-color: @blue;
-     }
- }
-
-.navbar ul.nav-menu {
+#menu-under-header.navbar ul.nav-menu {
      border: none;
-     margin-top: 0px;
-     padding-top: 0px;
-      }
-
-.navbar .dropdown-menu {
-    top: 130%;
-    font-family: @sansFontFamily;
-    font-size: 30px;
-    font-weight: 300;
-    color: @navColor;
-    background-color: transparent;
-    text-transform: lowercase;
-    background: @white;
-    border: 1px solid @blue;
-        a {
-            text-align: left;
-        	border: none;
-        	color: @blue;
-    	}
-    	> li a {
-            padding: 5px;
-            &:hover {
-                color: @blueDark;
-            }
-        }
-        li:last-child>a{
-            border-right: 2px solid @blue;
-        }
 }
 
+.navbar .dropdown-menu {
+	color: @white;
+	background: @blue;
+	border-radius: 0;
+	border: 1px solid @blueDark;
+		>li > a {
+			font-family: @baseFontFamily;
+			font-size: 20px;
+			color: @white;
+			text-align: left;
+			border-bottom: none;
+			&:hover {
+				color: @blueDark;
+			}
+		}
+}
 
+.navbar .nav > li {
+	padding: 4px 0px;
+	> .dropdown-menu:after {
+		border-bottom: 6px solid @blueDark;
+	}
+}
+
+.navbar .dropdown-menu {
+top: 100%;
+z-index: 1000;
+margin-top: 0;
+}
 
 // footer
 
@@ -206,23 +243,6 @@ body {
     font-family: @serifFontFamily;
 }
 
-#wrapper {
-    padding-top: 0;
-}
-
-h3 {
-    font-family: @sansAltFontFamily;
-    font-weight: 300;
-    color: @blueDark;
-}
-
-address {
-    font-family: @sansAltFontFamily;
-    font-weight: 300;
-    color: @blue;
-    line-height: (@baseLineHeight / 10);
-}
-
 .page .post-header {
     margin-left: 20px;
 }
@@ -256,12 +276,6 @@ address {
 }
 
 .content {
-    img {
-        .img-polaroid();
-        padding: 8px;
-        box-sizing: border-box;
-        width: 100%;
-    }
     h6 {
         font-size: (@baseFontSize + 5px);
         font-style: italic;
@@ -365,6 +379,10 @@ h1.post-title {
     }
 }
 
+.entry-content img {
+	.img-polaroid();
+}
+
 //Classes
 // -------------------------
 .symple-one-half {
@@ -390,7 +408,7 @@ width: 45%;
     font-weight: 300;
     font-size: 20px;
     padding: 40px 5px 0;
-    background: url("http://localhost:8888/healing-waters/wp-content/uploads/2013/10/HW-banner-1.jpg") no-repeat ;
+    background: url("./images/HW-banner-1.jpg") no-repeat ;
     text-align: right;
     text-transform: lowercase;
     }
@@ -417,12 +435,13 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
     border-color: @blue;
+    width: 96%;
 }
 
 
 .wpcf7-form {
     textarea {
-        width: 95%;
+        width: 96%;
     }
     p {
     color: @blue;
@@ -437,7 +456,6 @@ input[type="submit"] {
     color: @white;
     background-image: none;
     font-size: @baseFontSize;
-    //padding: 10px 60px;
     line-height: @baseLineHeight;
     text-shadow: none;
 
@@ -454,9 +472,43 @@ input[type="submit"] {
 
 .googlemap {
     width: 620px;
-    max-height: 300px;
+    height: 450px;
+    .img-polaroid();
+    box-sizing: border-box;
     }
-    .gmap {padding: none;}
+  
+.googlemap img {
+	border: none;
+	padding: 0;
+	margin: 0;
+}   
+//maps
+// -------------------------
+
+h2.about-name {
+	font-size: 40px;
+	font-family: @baseFontFamily;
+	font-weight: 700;
+	color: @blueDark;
+	text-shadow: 1px 1px 0px @blue;
+	letter-spacing: 2px;
+}
+
+h2.about-title {
+	font-size: 35px;
+	font-family: @baseFontFamily;
+	font-weight: 300;
+	color: @blueDark;
+}
+
+h5.about-certification {
+	font-size: 20px;
+	font-family: @baseFontFamily;
+	font-weight: 300;
+	color: @blue;
+	line-height: 25px;
+}
+
 
 
 // modal
@@ -492,29 +544,103 @@ input[type="submit"] {
 /* Tablet & Mobile */
 @media (max-width: 979px) {
 
- /*
-.navbar .nav > li {
- display: inline-block;
- float: none;
- }
- .navbar ul.nav-menu {
- border: none;
- //margin-top: 0px;
- //padding-top: 0px;
- }
- .navbar .nav {
- //margin: 0px;
- }
-*/
+	// background of navbar
+	.nav-collapse, .nav-collapse.collapse .navbar-inverse .navbar-inner {
+		background: fade(@blue, 50%);
+		background-color: fade(@blue, 90%);
+		background-image: fade(@blue, 90%);
+		.box-shadow(none);
+	}
+
+	#menu-under-header .menu-header-container {
+		border-top: 3px solid @blueDark;
+		border-bottom: 3px solid @blueDark;
+	}	
+	
+	#menu-under-header.navbar .nav {
+		>.active>a,
+		>.active>a:hover,
+		>.active>a:focus,
+		.current-menu-item > a,
+		.current-menu-item > a:hover {
+			color: @white;
+			.box-shadow(none);
+			font-weight: 600;
+			}
+		>li>a {
+		    font-family: @sansFontFamily;
+		    font-size: 25px;
+		    color: @white;
+		    background-color: transparent;
+		    text-transform: lowercase;
+		    line-height: 25px;
+		    border: none;
+		    &:hover {
+			    color: @navColorHover;
+		    }
+		}
+	}
+	
+	// collapsed navigation button background
+	.btn.btn-navbar {
+		font-family: @baseFontFamily;
+		font-size: 20px;
+		color: @navColor;
+		background: none;
+		border: none;
+		border-top: 3px solid @blue;
+	    border-bottom: 3px solid @blue;
+	    border-radius: 0;
+		width: 75%;
+		float: none;
+		margin: auto;
+		.box-shadow(none);
+		 &:hover {
+		 	color: @navColorHover;
+			background: none;
+		}
+	}
+	
+	[class^="icon-"], [class*=" icon-"] {
+		background-color: @blue;
+		border-radius: 0;
+	}
+	
+	//collapsed menu dropdown width
+	.nav-collapse, .nav-collapse.collapse {
+		width: 75%;
+		float: none;
+		margin: auto;
+	}
+	
+	.navbar .dropdown-menu {
+		border-radius: 0;
+	}
+	
+	.nav-collapse .dropdown-menu {
+		background: fade(@blueDark, 90%);
+		margin: 0 auto 5px;
+	}
+	
+	.navbar-inverse .nav-collapse .nav > li > a, .navbar-inverse .nav-collapse .dropdown-menu a {
+		color: @navColor;
+		font-family: @baseFontFamily;
+		font-size: 20px;
+		font-weight: inherit;
+	}
+	
+	.navbar-inverse .nav-collapse .nav > li > a:hover,
+	.navbar-inverse .nav-collapse .nav > li > a:focus,
+	.navbar-inverse .nav-collapse .dropdown-menu a:hover,
+	.navbar-inverse .nav-collapse .dropdown-menu a:focus {
+	background-color: transparent;
+	}
+
 }
+
 /* Mobile to Tablet */
 @media only screen and (max-width: 767px) {
-    input[type="text"] {
-        width: 98%;
-    }
-    .symple-one-half {
-        width: 100%;
-    }
+
 }
 
 
@@ -525,6 +651,8 @@ input[type="submit"] {
 
 /* Desktop */
 @media (min-width: 980px) {
+// navigation
+// -------------------------
 
 }
 

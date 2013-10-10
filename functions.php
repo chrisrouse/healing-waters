@@ -67,7 +67,7 @@ add_action( 'wp_enqueue_scripts', 'standard_child_theme_kit_reorder_styles', 100
 	wp_register_style( 'google_font_sans_serif_alt', 'http://fonts.googleapis.com/css?family=Exo:300,400' );
 wp_enqueue_style( 'google_font_sans_serif_alt' );
 
-	wp_register_style( 'google_font_sans_serif', 'http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600' );
+	wp_register_style( 'google_font_sans_serif', 'http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700' );
 wp_enqueue_style( 'google_font_sans_serif' );
 
 //load google webfont
