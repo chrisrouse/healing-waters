@@ -608,6 +608,9 @@ address {
   box-shadow: none;
   filter: none;
 }
+.navbar-inner {
+  border: none;
+}
 #menu-above-header {
   background: #008ac5;
 }
@@ -641,6 +644,9 @@ address {
   border-bottom: 3px solid #008ac5;
   padding-top: 6px;
   padding-bottom: 5px;
+}
+#menu-under-header.navbar {
+  text-align: center;
 }
 #menu-under-header.navbar .navbar-inner {
   text-align: center;
