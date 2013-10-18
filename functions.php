@@ -79,6 +79,20 @@ wp_enqueue_style( 'google_font_serif' );
  * Adds custom sidebars
  */
 function add_admin_sidebars() {
+
+    //Add Home sidebar
+    register_sidebar(
+        array(
+        	'name'          => __( 'Homepage Sidebar', 'standard' ),
+        	'id'            => 'homepage-sidebar',
+        	'description'   => 'Sidebar on the custom homepage',
+        	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        	'after_widget'  => '</div>',
+        	'before_title'  => '<h3 class="widget-title">',
+        	'after_title'   => '</h3>'
+        	)
+    );
+
     //Add Homepage Widget Left
     register_sidebar(
      array(
@@ -87,7 +101,7 @@ function add_admin_sidebars() {
      'description' => 'Left Sidebar on the custom homepage',
      'before_widget' => '<div id="%1$s" class="widget %2$s">',
      'after_widget' => '</div>',
-     'before_title' => '<h3 class="widgettitle">',
+     'before_title' => '<h3 class="widget-title">',
      'after_title' => '</h3>'
      )
     );
@@ -120,3 +134,14 @@ function add_admin_sidebars() {
 
 } // end add_theme_sidebars
 add_action('init', 'add_admin_sidebars');
+
+
+// exclude gallery category from post page
+function exclude_category($query) {
+if ( $query->is_home() ) {
+$query->set('cat', '-15');
+}
+return $query;
+}
+add_filter('pre_get_posts', 'exclude_category');
+

@@ -728,6 +728,12 @@ address {
 #footer #footer-links .navbar .nav > li > a:hover {
   color: #008ac5;
 }
+.home-excerpt {
+  margin-bottom: 40px;
+}
+.home-excerpt.post-title {
+  margin-left: 0px;
+}
 .page .post-header {
   margin-left: 20px;
 }
@@ -833,28 +839,16 @@ h1.post-title {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
-.symple-one-half {
-  width: 45%;
-}
-.class-title h6 {
-  background: #f2e4ca;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  border: 1px solid #008ac5;
-  padding: 10px 20px;
-  box-sizing: border-box;
-}
 .class-title h2 {
   color: #ffffff;
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  padding: 40px 5px 0;
-  background: url("./images/HW-banner-1.jpg") no-repeat;
+  font-weight: 600;
+  font-size: 40px;
+  padding: 40px 40px 5px 40px;
+  background: url("./images/HW-banner-1.JPG") no-repeat;
   text-align: right;
   text-transform: lowercase;
+  line-height: 40px;
 }
 textarea,
 input[type="text"],
