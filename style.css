@@ -540,14 +540,16 @@ body {
 }
 h2 {
   font-size: 35px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
-  color: #1b4583;
-}
-h3 {
   font-family: 'Exo', sans-serif;
   font-weight: 300;
   color: #1b4583;
+  line-height: 30px;
+}
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: #008ac5;
+  line-height: 30px;
 }
 h5 {
   color: #1b4583;
@@ -965,7 +967,8 @@ h5.about-certification {
   text-decoration: none;
 }
 .btn-info {
-  font-size: 24px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
   text-shadow: none;
   background-image: none;
   background-color: #008ac5;
@@ -973,6 +976,7 @@ h5.about-certification {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  padding: 14px;
 }
 .btn-info:hover {
   background-color: #1b4583;
@@ -1008,7 +1012,23 @@ h5.about-certification {
 ---------------------------------------------------------------------------------- */
 /* Smartphones */
 @media (max-width: 480px) {
-  
+  .modal-body {
+    max-height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .modal-header h3 {
+    font-size: 25px;
+  }
+}
+@media (max-height: 600px) {
+  .modal-body {
+    max-height: 350px;
+    padding: 15px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 /* Tablet & Mobile */
 @media (max-width: 979px) {

@@ -37,20 +37,22 @@ body {
 
 h2 {
 	font-size: 35px;
-	font-family: @baseFontFamily;
+	font-family: @sansAltFontFamily;
 	font-weight: 300;
 	color: @blueDark;
+	line-height: 30px;
 }
 
 h3 {
-    font-family: @sansAltFontFamily;
+    font-family: @baseFontFamily;
     font-weight: 300;
-    color: @blueDark;
+    color: @blue;
+    line-height: 30px;
 }
 
 h5 {
 	color: @blueDark;
-	font-weight: 300;
+	font-weight: @fontLight;
 	font-family: @sansAltFontFamily;
 	font-size: 20px;
 	line-height: 20px;
@@ -544,6 +546,7 @@ h5.about-certification {
     }
 }
 
+
 .modal.fade.in {
 	top: 5%;
 }
@@ -566,17 +569,20 @@ h5.about-certification {
 
 
 .btn-info {
-    font-size: (@baseFontSize * 1.5);
+	font-family: @baseFontFamily;
+    font-size: 20px;
     text-shadow: none;
     background-image: none;
     background-color: @blue;
     border-color: @blueDark;
     .box-shadow(none);
+    padding: 14px;
     &:hover {
         background-color: @blueDark;
         text-decoration: none;
     }
 }
+
 
 // widgets
 // -------------------------
@@ -616,9 +622,26 @@ h5.about-certification {
 
 /* Smartphones */
 @media (max-width: 480px) {
-
+.modal-body { 
+max-height: 300px; 
+padding: 15px; 
+overflow-y: auto; 
+-webkit-overflow-scrolling: touch; 
 }
 
+.modal-header h3 {
+	font-size: 25px;
+}
+}
+
+@media (max-height: 600px) {
+.modal-body { 
+max-height: 350px; 
+padding: 15px; 
+overflow-y: auto; 
+-webkit-overflow-scrolling: touch; 
+}
+}
 
 /* Tablet & Mobile */
 @media (max-width: 979px) {
