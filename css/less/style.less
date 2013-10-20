@@ -61,21 +61,6 @@ h5 {
 	background: #f2e4ca;
 }
 
-h6 { //used for pull quotes
-	font-family: @baseFontFamily;
-    font-size: 25px;
-    color: @textColor;
-    font-weight: @fontNormal;
-    padding: 15px;
-    background: @sand;
-    margin: -5px 0 15px 0 ;
-    text-align: center;
-    .box-shadow(0 0px 5px @blue);
-    border: 1px solid @blue;
-    display: block;
-    float: left;
-    //clear: both;
-}
 
 address {
 	font-size: 16px;
@@ -387,26 +372,28 @@ h1.post-title {
 }
 
 .entry-content img {
-	.img-polaroid();
+	//.img-polaroid();
 	box-sizing: border-box;
+    .box-shadow(0 0px 5px @black);
 }
 
 //Classes
 // -------------------------
-.class-title {
-    h2 {
-    color: @white;
+
+.row-fluid.marketing h4 {
+	color: @white;
     font-family: @baseFontFamily;
     font-weight: 600;
-    font-size: 40px;
-    padding: 40px 40px 5px 40px;
+    font-size: 30px;
+    padding: 40px 5px 0;
     background: url("./images/HW-banner-1.JPG") no-repeat ;
     text-align: right;
     text-transform: lowercase;
-    line-height: 40px;    
-    }
+    line-height: 40px; 
+    a {
+	    color: @white;
+    } 
 }
-
 
 //  Forms & Contact Form 7
 // -------------------------
@@ -458,6 +445,41 @@ input[type="submit"] {
     }
 }
 
+//testimonials
+// -------------------------
+
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-gravatar,
+div.in-content-testimonial .testimonial-gravatar {
+	display: none;
+}
+
+#tbtestimonial-listing div.in-listing-testimonial,
+div.in-content-testimonial {
+    padding: 15px;
+    background: @sand;
+    border: 1px solid @blue;
+}
+
+.span5 .in-content-testimonial {
+	margin-top: 0px;
+}
+
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-data,
+div.in-content-testimonial .testimonial-data {
+	width: 100%;
+}
+
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-data p,
+div.in-content-testimonial .testimonial-data p,
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-data .testimonial-author,
+div.in-content-testimonial .testimonial-data .testimonial-author {
+	font-family: @baseFontFamily;
+    color: @textColor;
+    font-weight: @fontNormal;
+	font-size: 22px;
+	text-align: center;
+}
+
 
 
 //maps
@@ -466,7 +488,7 @@ input[type="submit"] {
 .googlemap {
     width: 620px;
     height: 450px;
-    .img-polaroid();
+    //.img-polaroid();
     box-sizing: border-box;
     }
   

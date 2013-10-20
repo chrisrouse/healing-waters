@@ -561,22 +561,6 @@ h5 {
   box-sizing: border-box;
   background: #f2e4ca;
 }
-h6 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 25px;
-  color: #333333;
-  font-weight: 400;
-  padding: 15px;
-  background: #f2e4ca;
-  margin: -5px 0 15px 0;
-  text-align: center;
-  -webkit-box-shadow: 0 0px 5px #008ac5;
-  -moz-box-shadow: 0 0px 5px #008ac5;
-  box-shadow: 0 0px 5px #008ac5;
-  border: 1px solid #008ac5;
-  display: block;
-  float: left;
-}
 address {
   font-size: 16px;
   font-family: 'Exo', sans-serif;
@@ -831,24 +815,24 @@ h1.post-title {
   text-align: center;
 }
 .entry-content img {
-  padding: 4px;
-  background-color: #fff;
-  border: 1px solid #008ac5;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  -webkit-box-shadow: 0 0px 5px #000000;
+  -moz-box-shadow: 0 0px 5px #000000;
+  box-shadow: 0 0px 5px #000000;
 }
-.class-title h2 {
+.row-fluid.marketing h4 {
   color: #ffffff;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 600;
-  font-size: 40px;
-  padding: 40px 40px 5px 40px;
+  font-size: 30px;
+  padding: 40px 5px 0;
   background: url("./images/HW-banner-1.JPG") no-repeat;
   text-align: right;
   text-transform: lowercase;
   line-height: 40px;
+}
+.row-fluid.marketing h4 a {
+  color: #ffffff;
 }
 textarea,
 input[type="text"],
@@ -890,15 +874,36 @@ input[type="submit"]:hover {
   background-color: #1b4583;
   color: white;
 }
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-gravatar,
+div.in-content-testimonial .testimonial-gravatar {
+  display: none;
+}
+#tbtestimonial-listing div.in-listing-testimonial,
+div.in-content-testimonial {
+  padding: 15px;
+  background: #f2e4ca;
+  border: 1px solid #008ac5;
+}
+.span5 .in-content-testimonial {
+  margin-top: 0px;
+}
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-data,
+div.in-content-testimonial .testimonial-data {
+  width: 100%;
+}
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-data p,
+div.in-content-testimonial .testimonial-data p,
+#tbtestimonial-listing div.in-listing-testimonial .testimonial-data .testimonial-author,
+div.in-content-testimonial .testimonial-data .testimonial-author {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333333;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+}
 .googlemap {
   width: 620px;
   height: 450px;
-  padding: 4px;
-  background-color: #fff;
-  border: 1px solid #008ac5;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }
 .googlemap img {
