@@ -1,7 +1,6 @@
 /*
 Theme Name: Healing Waters
-Theme URI: https://github.com/chrisrouse
-Version: 1.5
+Version: 2.0
 Description: Child Theme for Healing Waters Roanoke.
 Author: Chris Rouse
 Author URI: http://chrisrouse.us
@@ -33,6 +32,10 @@ Template: standard
 
 body {
     font-family: @serifFontFamily;
+}
+
+.post p {
+	font-size: @baseFontSize;
 }
 
 h2 {
@@ -71,6 +74,19 @@ address {
     color: @blue;
 }
 
+// offline page
+// -------------------------
+
+#offline-wrapper .offline-message,
+#offline-wrapper .offline-message p,
+#offline-wrapper #offline-title,
+#offline-wrapper #offline-title small {
+	font-family: @baseFontFamily;
+}
+
+#offline-wrapper #offline-title small {
+	display: none;
+}
 
 // Responsive Slider
 // -------------------------
@@ -82,6 +98,11 @@ address {
     display: none;
 }
 
+.responsive-slider.flexslider .slides img  {
+    .img-polaroid();
+    box-sizing: border-box;
+}
+
 // Header Box
 // -------------------------
 #logo {
@@ -89,9 +110,9 @@ address {
     float: none;
 }
 
-#header-image h1 a, #header-image p a {
+#header-image img, #header-image a img {
 	text-align: center;
-	margin: @baseLineHeight 0;
+	margin: 20px 0;
 }
 
 
@@ -364,19 +385,25 @@ h1.post-title {
 .widget h4.widget-title,
 #footer-widgets .widget h4.widget-title {
     font-family: @baseFontFamily;
-    font-size: (@baseFontSize * 2);
+    font-size: 32px;
     border-top: 1px solid @blueDark;
     border-bottom: 1px solid @blueDark;
     padding: 15px 0 13px 0;
     color: @blueDark;
     text-align: center;
-
+    line-height: 30px;
 }
 
 .entry-content img {
 	//.img-polaroid();
 	box-sizing: border-box;
     .box-shadow(0 0px 5px @black);
+}
+
+#comments .bypostauthor>.comment-container {
+border-right: 5px solid @blue;
+background: fade(@blue, 5%);
+border-radius: 4px;
 }
 
 //Classes
@@ -490,14 +517,15 @@ div.in-content-testimonial .testimonial-data .testimonial-author {
 .googlemap {
     width: 620px;
     height: 450px;
-    //.img-polaroid();
     box-sizing: border-box;
+    .box-shadow(0 0px 5px @black);
     }
   
 .googlemap img {
 	border: none;
 	padding: 0;
 	margin: 0;
+	.box-shadow(none);
 }   
 //maps
 // -------------------------

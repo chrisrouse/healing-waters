@@ -80,6 +80,7 @@ wp_enqueue_style( 'google_font_serif' );
  */
 function add_admin_sidebars() {
 
+/*
     //Add Home sidebar
     register_sidebar(
         array(
@@ -92,6 +93,7 @@ function add_admin_sidebars() {
         	'after_title'   => '</h3>'
         	)
     );
+*/
 
     //Add Homepage Widget Left
     register_sidebar(

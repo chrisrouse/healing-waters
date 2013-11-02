@@ -3,8 +3,7 @@
 @import url('../standard/css/theme-responsive.css');
 /*
 Theme Name: Healing Waters
-Theme URI: https://github.com/chrisrouse
-Version: 1.5
+Version: 2.0
 Description: Child Theme for Healing Waters Roanoke.
 Author: Chris Rouse
 Author URI: http://chrisrouse.us
@@ -224,7 +223,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: #333333;
   background-color: #ffffff;
@@ -262,281 +261,13 @@ a:focus {
 .home .breadcrumb {
   display: none;
 }
-p {
-  margin: 0 0 0.75;
-}
-.lead {
-  margin-bottom: 1.5;
-  font-size: 24px;
-  font-weight: 200;
-  line-height: 2.25;
-}
-small {
-  font-size: 85%;
-}
-strong {
-  font-weight: bold;
-}
-em {
-  font-style: italic;
-}
-cite {
-  font-style: normal;
-}
-.muted {
-  color: #999999;
-}
-a.muted:hover,
-a.muted:focus {
-  color: #808080;
-}
-.text-warning {
-  color: #c09853;
-}
-a.text-warning:hover,
-a.text-warning:focus {
-  color: #a47e3c;
-}
-.text-error {
-  color: #b94a48;
-}
-a.text-error:hover,
-a.text-error:focus {
-  color: #953b39;
-}
-.text-info {
-  color: #3a87ad;
-}
-a.text-info:hover,
-a.text-info:focus {
-  color: #2d6987;
-}
-.text-success {
-  color: #468847;
-}
-a.text-success:hover,
-a.text-success:focus {
-  color: #356635;
-}
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0.75 0;
-  font-family: inherit;
-  font-weight: bold;
-  line-height: 1.5;
-  color: #333333;
-  text-rendering: optimizelegibility;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999999;
-}
-h1,
-h2,
-h3 {
-  line-height: 3;
-}
-h1 {
-  font-size: 44px;
-}
-h2 {
-  font-size: 36px;
-}
-h3 {
-  font-size: 28px;
-}
-h4 {
-  font-size: 20px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 13.6px;
-}
-h1 small {
-  font-size: 28px;
-}
-h2 small {
-  font-size: 20px;
-}
-h3 small {
-  font-size: 16px;
-}
-h4 small {
-  font-size: 16px;
-}
-.page-header {
-  padding-bottom: -0.25;
-  margin: 1.5 0 2.25;
-  border-bottom: 1px solid #eeeeee;
-}
-ul,
-ol {
-  padding: 0;
-  margin: 0 0 0.75 25px;
-}
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-}
-li {
-  line-height: 1.5;
-}
-ul.unstyled,
-ol.unstyled {
-  margin-left: 0;
-  list-style: none;
-}
-ul.inline,
-ol.inline {
-  margin-left: 0;
-  list-style: none;
-}
-ul.inline > li,
-ol.inline > li {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-dl {
-  margin-bottom: 1.5;
-}
-dt,
-dd {
-  line-height: 1.5;
-}
-dt {
-  font-weight: bold;
-}
-dd {
-  margin-left: 0.75;
-}
-.dl-horizontal {
-  *zoom: 1;
-}
-.dl-horizontal:before,
-.dl-horizontal:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.dl-horizontal:after {
-  clear: both;
-}
-.dl-horizontal dt {
-  float: left;
-  width: 160px;
-  clear: left;
-  text-align: right;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.dl-horizontal dd {
-  margin-left: 180px;
-}
-hr {
-  margin: 1.5 0;
-  border: 0;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #ffffff;
-}
-abbr[title],
-abbr[data-original-title] {
-  cursor: help;
-  border-bottom: 1px dotted #999999;
-}
-abbr.initialism {
-  font-size: 90%;
-  text-transform: uppercase;
-}
-blockquote {
-  padding: 0 0 0 15px;
-  margin: 0 0 1.5;
-  border-left: 5px solid #eeeeee;
-}
-blockquote p {
-  margin-bottom: 0;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.25;
-}
-blockquote small {
-  display: block;
-  line-height: 1.5;
-  color: #999999;
-}
-blockquote small:before {
-  content: '\2014 \00A0';
-}
-blockquote.pull-right {
-  float: right;
-  padding-right: 15px;
-  padding-left: 0;
-  border-right: 5px solid #eeeeee;
-  border-left: 0;
-}
-blockquote.pull-right p,
-blockquote.pull-right small {
-  text-align: right;
-}
-blockquote.pull-right small:before {
-  content: '';
-}
-blockquote.pull-right small:after {
-  content: '\00A0 \2014';
-}
-q:before,
-q:after,
-blockquote:before,
-blockquote:after {
-  content: "";
-}
-address {
-  display: block;
-  margin-bottom: 1.5;
-  font-style: normal;
-  line-height: 1.5;
-}
-.responsive-slider.flexslider .slides img {
-  padding: 4px;
-  background-color: #fff;
-  border: 1px solid #008ac5;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-}
 /* Customizations
 ---------------------------------------------------------------------------------- */
 body {
   font-family: 'Droid Serif', serif;
+}
+.post p {
+  font-size: 18px;
 }
 h2 {
   font-size: 35px;
@@ -569,20 +300,38 @@ address {
   font-weight: 300;
   color: #008ac5;
 }
+#offline-wrapper .offline-message,
+#offline-wrapper .offline-message p,
+#offline-wrapper #offline-title,
+#offline-wrapper #offline-title small {
+  font-family: 'Josefin Sans', sans-serif;
+}
+#offline-wrapper #offline-title small {
+  display: none;
+}
 .responsive-slider.flexslider .slide-title a {
   display: none;
 }
 .responsive-slider.flexslider .flex-control-nav {
   display: none;
 }
+.responsive-slider.flexslider .slides img {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #008ac5;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
 #logo {
   text-align: center;
   float: none;
 }
-#header-image h1 a,
-#header-image p a {
+#header-image img,
+#header-image a img {
   text-align: center;
-  margin: 1.5 0;
+  margin: 20px 0;
 }
 .navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner,
@@ -703,7 +452,7 @@ address {
 }
 #footer #footer-links .navbar .nav > li > a {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #ffffff;
   background: #1b4583;
   padding: 0 10px;
@@ -800,7 +549,7 @@ h1.post-title {
   text-transform: capitalize;
 }
 .format-aside .aside-date span.the-time {
-  font-size: 16px;
+  font-size: 18px;
 }
 .post-meta {
   font-family: 'Josefin Sans', sans-serif;
@@ -815,12 +564,18 @@ h1.post-title {
   padding: 15px 0 13px 0;
   color: #1b4583;
   text-align: center;
+  line-height: 30px;
 }
 .entry-content img {
   box-sizing: border-box;
   -webkit-box-shadow: 0 0px 5px #000000;
   -moz-box-shadow: 0 0px 5px #000000;
   box-shadow: 0 0px 5px #000000;
+}
+#comments .bypostauthor > .comment-container {
+  border-right: 5px solid #008ac5;
+  background: rgba(0, 138, 197, 0.05);
+  border-radius: 4px;
 }
 .row-fluid.marketing h4 {
   color: #ffffff;
@@ -861,14 +616,14 @@ input[type="color"],
 .wpcf7-form p {
   color: #008ac5;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+  font-size: 22.5px;
 }
 input[type="submit"] {
   border: none;
   background-color: #008ac5;
   color: #ffffff;
   background-image: none;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   text-shadow: none;
 }
@@ -907,11 +662,17 @@ div.in-content-testimonial .testimonial-data .testimonial-author {
   width: 620px;
   height: 450px;
   box-sizing: border-box;
+  -webkit-box-shadow: 0 0px 5px #000000;
+  -moz-box-shadow: 0 0px 5px #000000;
+  box-shadow: 0 0px 5px #000000;
 }
 .googlemap img {
   border: none;
   padding: 0;
   margin: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 h2.about-name {
   font-size: 40px;
@@ -953,7 +714,7 @@ h5.about-certification {
   top: 5%;
 }
 .btn-primary {
-  font-size: 24px;
+  font-size: 27px;
   text-shadow: none;
   background-image: none;
   background-color: #1b4583;
